@@ -41,17 +41,13 @@ public class Calc {
         }
         int arabian = calc(number1, number2, operation);
         if (isRoman) {
-            //если римское число получилось меньше либо равно нулю, генерируем ошибку
             if (arabian <= 0) {
                 throw new Exception("Римское число должно быть больше нуля");
             }
-            //конвертируем результат операции из арабского в римское
             res = Roman.convertToRoman(arabian);
         } else {
-            //Конвертируем арабское число в тип String
             res = String.valueOf(arabian);
         }
-        //возвращаем результат
         return res;
     }
 
